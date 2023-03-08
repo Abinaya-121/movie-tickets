@@ -22,6 +22,12 @@ function updateCounts() {
     priceE1.innerText=selectedSeatsCount * ticketPrice;
 }
 
+//movie select
+
+movieE1.addEventListener('change', (e)=>{
+    ticketPrice=+e.target.value;
+    updateCounts();
+});
 
 
 containerE1.addEventListener('click' ,(e)=>{
