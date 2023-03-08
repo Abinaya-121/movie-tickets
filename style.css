@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+
+    --clr-brown:#ccd5ae;
+    --clr-light-blue:#a2d2ff;
+    --clr-dark-blue:#073b4c;
+    --clr-yellow:#ffc300;
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-noto-sans: 'Noto Sans', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --max-width: 1170px;
+  --fixed-width: 450px;
+}
+
+body{
+   height:100vh;
+    width:100vw;
+    background-color: var(--clr-dark-blue);
+    color:white;
+    padding:1rem;
+    margin:1rem;
+}
+.movie-container{
+    padding:0.5rem;
+    margin:0.25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size:1rem;
+}
+.movie{
+    border:none;
+    padding:10px;
+    border-radius: var(--radius);
+}
+.screen-one{
+    font-family: var(--ff-noto-sans);
+}
+/* option{
+    background-color:;
+} */
+.screen-two{
+    padding:0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0.25rem;
+    font-family: var(--ff-noto-sans);
+
+}
+.screen-three{
+    padding: 1rem;
+    width:22rem;
+    height:7rem;
+    background-color: #ccd5ae;
+    box-shadow:0 3px 10px;
+    transform: rotateX(-45deg);
+    gap:0.25rem;
+
+}
+.container{
+    perspective: 1000px;
+}
+.screen-four{
+    padding:1rem;
+}
+.row{
+display: flex;
+align-items: center;
+}
+.seats{
+    height:30px;
+    width:30px;
+    margin:6px;
+    border-radius: var(--radius);
+    background-color: var(--clr-light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seats:not(.booked):hover{
+    transform:scale(1.2);
+    cursor: pointer;
+}
+.seats.selected{
+    background-color: var(--clr-yellow);
+}
+.seats.booked{
+    background-color: pink;
+    cursor:not-allowed;
+}
+.text{
+    padding: 0.5rem;
+    font-family: var(--ff-noto-sans);
+}
+small{
+    color:#6ab7d1;
+}
